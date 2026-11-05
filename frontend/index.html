@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Курсы валют</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="intro">
+            <p class="subtitle">ФИНАНСЫ / ВАЛЮТЫ</p>
+
+            <h1>Курсы валют</h1>
+
+            <p class="description">
+                Актуальная стоимость иностранных валют
+                по отношению к российскому рублю.
+            </p>
+
+            <div class="update-info">
+                <span class="status-dot"></span>
+                <span id="updateDate">Загрузка курсов...</span>
+            </div>
+        </section>
+
+        <section class="currencies-section">
+
+            <div class="section-header">
+                <h2>Все валюты</h2>
+
+                <button id="refreshButton">
+                    ↻ Обновить
+                </button>
+            </div>
+
+            <div class="currency-list" id="currencyList">
+                <p class="loading">Загружаем валюты...</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="modal-overlay" id="modal">
+
+        <div class="modal">
+
+            <button class="close-button" id="closeModal">
+                ×
+            </button>
+
+            <p class="modal-subtitle">ИНФОРМАЦИЯ О ВАЛЮТЕ</p>
+
+            <div class="modal-code" id="modalCode">USD</div>
+
+            <h2 id="modalName">Доллар США</h2>
+
+            <div class="modal-rate">
+                <span id="modalRate">0,00</span>
+                <small>₽ за 1 единицу</small>
+            </div>
+
+            <div class="modal-details">
+
+                <div class="detail-row">
+                    <span>Код валюты</span>
+                    <strong id="detailCode">USD</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Номинал ЦБ</span>
+                    <strong id="detailNominal">1</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Предыдущий курс</span>
+                    <strong id="detailPrevious">0,00 ₽</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Изменение</span>
+                    <strong id="detailChange">0,00 ₽</strong>
+                </div>
+
+            </div>
+
+            <button class="modal-button" id="modalDone">
+                Понятно
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>

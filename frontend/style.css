@@ -1,0 +1,334 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f8;
+    color: #222;
+}
+
+
+.logo {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #ed6e9f;
+}
+
+.header-text {
+    color: #888;
+    font-size: 13px;
+}
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 65px 25px;
+}
+
+.intro {
+    margin-bottom: 55px;
+}
+
+.subtitle,
+.modal-subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 470px;
+}
+
+.update-info {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 25px;
+    color: #888;
+    font-size: 12px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ed6e9f;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 20px;
+}
+
+#refreshButton {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    padding: 10px 16px;
+    cursor: pointer;
+    color: #555;
+    transition: 0.2s;
+}
+
+#refreshButton:hover {
+    background: #eeeeee;
+}
+
+.currency-list {
+    background: white;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.currency-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px 23px;
+    border-bottom: 1px solid #eeeeee;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.currency-item:last-child {
+    border-bottom: none;
+}
+
+.currency-item:hover {
+    background: #f9faf9;
+}
+
+.currency-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.currency-code {
+    width: 48px;
+    height: 40px;
+    background: #f2f4f2;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #617e69;
+}
+
+.currency-name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.currency-description {
+    color: #999;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.currency-price {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.currency-change {
+    font-size: 11px;
+    margin-top: 5px;
+    color: #999;
+}
+
+.positive {
+    color: #ed6e9f;
+}
+
+.negative {
+    color: #c46c6c;
+}
+
+.loading {
+    padding: 30px;
+    text-align: center;
+    color: #999;
+}
+
+.footer {
+    margin-top: 35px;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer a {
+    color: #ed6e9f;
+    text-decoration: none;
+}
+
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 10;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    border-radius: 13px;
+    padding: 35px;
+    animation: appear 0.2s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-button {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    border: none;
+    background: none;
+    font-size: 28px;
+    color: #999;
+    cursor: pointer;
+}
+
+.modal-code {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.modal h2 {
+    font-size: 17px;
+    color: #777;
+    font-weight: normal;
+}
+
+.modal-rate {
+    margin: 28px 0;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.modal-rate small {
+    display: block;
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
+    margin-top: 7px;
+}
+
+.modal-details {
+    border-top: 1px solid #eee;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+}
+
+.detail-row span {
+    color: #999;
+}
+
+.detail-row strong {
+    font-weight: 600;
+}
+
+.modal-button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background: #ed6e9f;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.modal-button:hover {
+    background: #ed6e9f;
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 0 20px;
+    }
+
+    .container {
+        padding: 40px 15px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .currency-item {
+        padding: 16px 12px;
+    }
+
+    .currency-name {
+        font-size: 12px;
+    }
+
+    .currency-price {
+        font-size: 13px;
+    }
+
+    .modal {
+        padding: 25px;
+    }
+}
